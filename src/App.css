@@ -1,5 +1,13 @@
-.App {
-  text-align: center;
+.App {  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(30deg, #1d93e2, rgb(173, 218, 255));
+  z-index: -10;
+  overflow: hidden;
 }
 
 .App-logo {

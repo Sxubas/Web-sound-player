@@ -1,0 +1,134 @@
+.player-container{
+  position: relative;
+  margin: 12px;
+  width: 80%;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  width: calc(100% - (144px + 16px + 16px));
+  top: 0px;
+  left: 16px;
+  padding-left: 144px;
+  transition: all 0.2s ease-in-out;
+  z-index: 0;
+  color: white;
+  background: linear-gradient(120deg, rgb(0, 0, 85), rgb(57, 109, 204));
+}
+
+.info-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.info-text b, .info-text p{
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.info-text b{
+  font-size: 1.2rem;
+}
+
+.info-text .album{
+  margin-top: -4px;
+  font-size: 0.8rem;
+}
+
+.info-text p{
+  color: rgb(190, 190, 190);
+  font-size: 0.96rem;
+}
+
+.progress-bar-container{
+  width: 96%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: whitesmoke;
+  margin: 4px 0;
+}
+
+.progress-timers{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+}
+
+.progress-bar{
+  height: 100%;
+  border-radius: 2px;
+  background-color: rgb(36, 138, 255);
+  transition: all 900ms linear;
+}
+
+.panel-container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  z-index: 1;
+}
+
+.album-art{
+  position: relative;
+  margin-left: 40px;
+}
+
+.album-art img{
+  position: absolute;
+  top: calc(-40px - 2.4rem);
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 0 0 10px #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.album-art img.playing{
+  box-shadow: 0 0 0 6px #fff;
+  top: calc(-90px);
+  animation: rotateAlbum 3s linear 0s infinite forwards;
+}
+
+@keyframes rotateAlbum
+{
+    0%{ transform: rotateZ(0); }
+    100%{ transform: rotateZ(360deg); }
+}
+
+.info-container.visible{
+  opacity: 1;
+  transform: translateY(-92px);
+}
+
+.info-container.hidden{
+  opacity: 0;
+}
+
+
+.controls-container i{
+  font-size: 3.2rem;
+  margin: 4px;
+  padding: 8px;
+  color: rgb(0, 71, 119);
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.controls-container i:hover{
+  color: white;
+  background-color: rgb(0, 122, 221);
+}

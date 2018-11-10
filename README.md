@@ -10,11 +10,11 @@ Clone the repository and add your FakeJson token to the file `./src/components/S
 
 Then, execute the following commands:
 
-###1. `npm install`
+### 1. `npm install`
 
 This will install all the project dependencies.
 
-###2. `npm start`
+### 2. `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
